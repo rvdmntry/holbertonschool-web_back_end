@@ -10,12 +10,12 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       return results.map((result) => {
         if (result.status === 'fulfilled') {
           return {
-            status: result.status,
+            status: 'fulfilled',
             value: result.value,
           };
         } else {
           return {
-            status: result.status,
+            status: 'rejected',
             value: result.reason,
           };
         }
